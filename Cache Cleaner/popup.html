@@ -1,0 +1,58 @@
+﻿<!doctype html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> 
+    <title>清理缓存(Cache Cleaner)</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
+	<link href="./layui/css/layui.css" rel="stylesheet" type="text/css">
+	<script src="jquery-3.2.1.min.js"></script>
+	<script src="./layui/layui.js"></script>
+	<script src="popup.js"></script>
+  </head>
+  <body>
+	<form id="options" class="form layui-form">
+	
+		<div class="title_v flex_r flex_items_center">
+			<img src="clean48.png" alt="Toast" class="titleImg">
+			<div class="title_text">清理缓存<span class="title_span">(Cache Cleaner)</span></div>
+		</div>
+		
+		<div class="content">
+			
+			<select id="time" name="time">
+				<option value="0.04166">1小时前 (An hour ago)</option>
+				<option value="1">1天前 (One day ago)</option>
+				<option value="5">5天前 (Five days age)</option>
+				<option value="30">1月前 (One month ago)</option>
+				<option value="365">1年前 (One year ago)</option>
+			</select>
+			
+			<div class="flex_c main_input" id="view">
+				<input type="checkbox" name="appcache" value="true" lay-skin="primary" checked title="应用缓存(appcache)">
+				<input type="checkbox" name="cache" value="true" lay-skin="primary"checked title="浏览器缓存(cache)">
+				<input type="checkbox" name="cookies" value="true" lay-skin="primary" title="cookies">
+				<input type="checkbox" name="passwords" value="true" lay-skin="primary" title="密码(passwords)">
+				<input type="checkbox" name="downloads" value="true" lay-skin="primary" title="下载记录(downloads)">
+				<input type="checkbox" name="fileSystems" value="true" lay-skin="primary" checked title="文件系统(fileSystem)">
+				<input type="checkbox" name="formData" value="true" lay-skin="primary" checked title="表单数据(formData)">
+				<input type="checkbox" name="history" value="true" lay-skin="primary" title="历史记录(history)">
+				<input type="checkbox" name="indexedDB" value="true" lay-skin="primary" title="indexedDB">
+				<input type="checkbox" name="localStorage" value="true" lay-skin="primary" checked title="本地存储(localStorage)">
+				<input type="checkbox" name="serverBoundCertificates" value="true" lay-skin="primary" title="服务器证书(serverBoundCertificates)">
+				<input type="checkbox" name="pluginData" value="true" lay-skin="primary" title="插件数据(pluginData)">
+				<input type="checkbox" name="webSQL" value="true" lay-skin="primary" title="webSQL">
+				
+			</div>
+			
+			<div id="showMsg" name="showMsg" class="showMsg flex_c flex_center">快捷键(hot key)：Alt+C</div>
+			<div class="toclean flex_r flex_center flex_items_center" lay-submit="" lay-filter="cleanFilter">立即清理(clean up now)</div>
+		</div>
+		
+    </form>
+  </body>
+
+</html>
+
+
+
+
