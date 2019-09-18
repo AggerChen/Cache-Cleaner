@@ -11,7 +11,6 @@ chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
 
 //监听快捷键
 chrome.commands.onCommand.addListener(function(command) {
-
   if (command == "cleanKey") {				//如果快捷键是指定的按钮
     toclean(1,{ "appcache": true,			//则调用执行清除方法
                 "cache": true,
@@ -34,7 +33,6 @@ function toclean(days,data){
 	
 	var millisecondsPerWeek = 1000 * 60 * 60 * 24 * days;
 	var ago = (new Date()).getTime() - millisecondsPerWeek;
-	alert(JSON.stringify(data));
 	chrome.browsingData.remove({ "since": ago }, data , function () {
 		//弹出框
 		new Notification('Cache Cleaner', {
