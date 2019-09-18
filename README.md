@@ -11,6 +11,4 @@
 4. 可以选择需要清除的缓存项和清除的时间范围
 5. 可以在浏览器中，按快捷键 Alt+C 来快捷清除缓存；如果快捷键不起作用，请在浏览器地址栏中输入
  `chrome://extensions/configureCommands`进入到设置中，为此插件添加快捷键 Alt+C
- ![651e7d5d32e4158f8dbb23d0e5917570.png](en-resource://database/1532:0)
- 
-6. 更多开发说明请查看博客[博客地址](https://blog.csdn.net/github_36086968/article/details/70910588"%3Ehttps://blog.csdn.net/github_36086968/article/details/70910588)
+6. 更多开发说明请查看博客[博客地址](https://blog.csdn.net/github_36086968/article/details/70910588)
